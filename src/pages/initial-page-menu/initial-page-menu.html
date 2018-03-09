@@ -1,0 +1,31 @@
+
+
+<ion-content padding>
+  <ion-menu [content]="content">
+    <ion-header>
+      <ion-navbar>
+        <button ion-button menuToggle icon-only>
+          <ion-icon name='close'></ion-icon>
+        </button>
+        <ion-title>
+          Menus
+        </ion-title>
+      </ion-navbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item (click)="openSobre()">
+          Sobre
+        </button>
+        <button ion-item (click)="openPerfil()">
+          Perfil
+        </button>
+        <button ion-item (click)="signOut()">
+          Sair
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-nav id="nav" #content [root]="rootPage" ></ion-nav>
+</ion-content>

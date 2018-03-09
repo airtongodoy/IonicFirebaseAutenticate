@@ -1,4 +1,5 @@
-import { HomePage } from './../home/home';
+import { PrincipalTabsPage } from './../principal-tabs/principal-tabs';
+import { InitialPageMenuPage } from './../initial-page-menu/initial-page-menu';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 // login.ts
@@ -22,25 +23,25 @@ export class LoginPage {
               private afAuth: AngularFireAuth, 
               private toastCtrl: ToastController) { 
 
-    this.afAuth.auth.signInWithEmailAndPassword(this.loginData.email, this.loginData.password)
-      .then(auth => {
-        // Do custom things with auth
-      })
-      .catch(err => {
-        // Handle error
-        let toast = this.toastCtrl.create({
-          message: err.message,
-          duration: 2500
-        });
-        toast.present();
-      });
+    // this.afAuth.auth.signInWithEmailAndPassword(this.loginData.email, this.loginData.password)
+    //   .then(auth => {
+    //     // Do custom things with auth
+    //   })
+    //   .catch(err => {
+    //     // Handle error
+    //     let toast = this.toastCtrl.create({
+    //       message: err.message,
+    //       duration: 2500
+    //     });
+    //     toast.present();
+    //   });
   }
 
   async login(user: User) {
     try {
       const result = await this.afAuth.auth.signInWithEmailAndPassword(this.loginData.email, this.loginData.password);
       if (result) {
-        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.setRoot(PrincipalTabsPage);
       }
     }
     catch (e) {

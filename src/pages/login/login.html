@@ -12,16 +12,17 @@
       <div class="sombraBox2">
       <ion-item>
         <ion-label floating >E-Mail</ion-label>
-        <ion-input type="email" [(ngModel)]="loginData.email"></ion-input>
+        <ion-input type="email" [(ngModel)]="loginData.email" >{{varMail}}</ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>Senha</ion-label>
-        <ion-input type="password" [(ngModel)]="loginData.password"></ion-input>
+        <ion-input type="password" [(ngModel)]="loginData.password" >{{ varSenha }}</ion-input>
       </ion-item>
       </div>
     </ion-list>
     <button full ion-button (click)="login()" [disabled]="!loginData.email || !loginData.password">Entrar</button>
-    <a href="#" class="colorLink" (click)="signup()">Cadastre-se</a>
+    <button ion-button color="light" (click)="signup()" small>Cadastre-se</button>
+    
 
   </div>
 </ion-content>

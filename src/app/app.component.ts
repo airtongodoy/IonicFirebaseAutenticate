@@ -1,17 +1,18 @@
+import { PrincipalTabsPage } from './../pages/principal-tabs/principal-tabs';
+// import { InitialPageMenuPage } from './../pages/initial-page-menu/initial-page-menu';
 import { LoginPage } from './../pages/login/login';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage: any = LoginPage;
 
   constructor(platform: Platform, 
               private afAuth: AngularFireAuth, 
@@ -22,7 +23,7 @@ export class MyApp {
       if (!auth)
         this.rootPage = LoginPage;
       else
-        this.rootPage = HomePage;
+        this.rootPage = PrincipalTabsPage;
     });
 
     platform.ready().then(() => {

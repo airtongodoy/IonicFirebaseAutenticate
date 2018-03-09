@@ -1,13 +1,17 @@
-<ion-header>
+<ion-header style="display: -webkit-box;" >
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only block menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
     <ion-buttons end>
       <button ion-button icon-only (click)="signOut()">
         <ion-icon name="power"></ion-icon>
       </button>
     </ion-buttons>
+
   </ion-navbar>
 </ion-header>
 

@@ -1,3 +1,5 @@
+import { PrincipalTabsPageModule } from './../pages/principal-tabs/principal-tabs.module';
+
 import { environment } from './../enviroments/enviroments';
 import { SignupPage } from './../pages/signup/signup';
 import { LoginPage } from './../pages/login/login';
@@ -13,6 +15,7 @@ import { HomePage } from '../pages/home/home';
 import { AngularFireModule } from 'angularfire2';
 
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { PrincipalTabsPage } from '../pages/principal-tabs/principal-tabs';
 
 
 @NgModule({
@@ -27,6 +30,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule
+
+    ,PrincipalTabsPageModule
     
   ],
   bootstrap: [IonicApp],
@@ -35,6 +40,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     HomePage,
     LoginPage,
     SignupPage
+
+    
   ],
   providers: [
     StatusBar,
