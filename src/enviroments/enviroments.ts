@@ -6,7 +6,7 @@ export const environment = {
         databaseURL: "https://ionicfirebaseautenticate.firebaseio.com",
         projectId: "ionicfirebaseautenticate",
         storageBucket: "ionicfirebaseautenticate.appspot.com",
-        messagingSenderId: "362645811146s"
+        messagingSenderId: "362645811146"
     }
 
 };
